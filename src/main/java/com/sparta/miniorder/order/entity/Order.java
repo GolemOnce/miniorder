@@ -22,7 +22,10 @@ public class Order {
     @JoinColumn(name = "product_id", nullable = false)
     private Product product;
 
-    public Order(Product product) {
+    private int quantity;
+
+    public Order(Product product, int quantity) {
         this.product = product;
+        this.quantity = quantity;
     }
 }
